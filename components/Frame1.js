@@ -6,17 +6,17 @@ import { color } from '../global-config';
 const Frame1 = () => {
     const [states, dispatch] = useStore();
     return (
-        <div className="f1-container panel">
+        <div className=" panel">
             <Box sx={{
                 // backgroundColor: `${color.section1}`,
                 background: 'linear-gradient(to right bottom, #592988, #220e4a)',
                 display: 'flex',
                 alignItems: 'left',
-                justifyContent:'center',
-                flexDirection:'column',
+                justifyContent: 'center',
+                flexDirection: 'column',
                 padding: '96px 15vw',
-                minHeight:'100vh',
-                width:'100vw'
+                minHeight: '100vh',
+                width: '100vw'
             }}>
                 <p>Kiến Tạo Tương Lai</p>
                 <h3 className='color-primary'>TEKNIX</h3>

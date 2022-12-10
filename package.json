@@ -1,5 +1,5 @@
 {
-    "name": "zomland_project",
+    "name": "teknix-corp",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -13,6 +13,7 @@
         "@emotion/styled": "^11.10.5",
         "@fontsource/nunito-sans": "^4.5.10",
         "@fontsource/roboto": "^4.5.8",
+        "@fullpage/react-fullpage": "^0.1.31",
         "@mui/icons-material": "^5.10.16",
         "@mui/material": "^5.10.15",
         "@mui/styled-engine-sc": "^5.10.14",

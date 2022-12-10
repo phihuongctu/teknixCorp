@@ -1,62 +1,14 @@
 import { StoreProvider } from '../store';
 import '../styles/globals.css';
-// import '@fontsource/nunito-sans';
 import { localeDefault } from '../global-config';
 import Head from 'next/head';
-import Script from 'next/script';
 import { useEffect } from 'react';
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
 
 function MyApp({ stars, ...props }) {
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0
-        });
-    }, []);
-    useEffect(() => {
-
-        let panels = gsap.utils.toArray(".panel");
-        let scrollTween;
-        function scrollTo(arg) {
-            console.log(window.innerHeight);
-            return { y: arg * window.innerHeight, autoKill: false };
-        }
-
-        function goToSection(i) {
-            scrollTween = gsap.to(window, {
-                scrollTo: () => {
-                    scrollTo(i);
-                    console.log(i);
-                },
-                duration: 1,
-                onComplete: () => (scrollTween = null),
-                overwrite: true
-            });
-        }
-
-        panels.forEach((panel, i) => {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: "top bottom",
-
-                onToggle: (self) => self.isActive && !scrollTween && goToSection(i)
-            });
-
-            ScrollTrigger.create({
-                start: 0,
-                end: "max",
-                snap: 1 / (panels.length - 1)
-            });
-        });
-    }, []);
     return (
         <StoreProvider initstates={stars.initStates}>
             <Head>
@@ -96,6 +48,7 @@ function MyApp({ stars, ...props }) {
                 />
             </Head>
             <props.Component {...props.pageProps} />
+
         </StoreProvider>
     );
 }
