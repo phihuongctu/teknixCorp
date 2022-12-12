@@ -23,6 +23,26 @@ const Frame1 = () => {
                 <h3>CORPORATION</h3>
                 <p className='description'><b>TekNix Corporation</b> là công ty công nghệ chuyên cung cấp các phần mềm, ứng dụng, giải pháp công nghệ thông tin cho doanh nghiệp và người dùng.
 </p>
+                <img className='bubble' id='bee'
+                    src={`${img('Bubble-Network.png')}`}
+                    style={{
+                        width: '400px',
+                        display: 'block',
+                        position: 'absolute',
+                        bottom: '3rem',
+                        left: '3rem'
+                    }}
+                />
+                <img className='bubble'
+                    src={`${img('Bubble-Network.png')}`}
+                    style={{
+                        width: '200px',
+                        display: 'block',
+                        position:'absolute',
+                        top:'3rem',
+                        left:'3rem'
+                    }}
+                />
             </Box>
         </div>
     );
