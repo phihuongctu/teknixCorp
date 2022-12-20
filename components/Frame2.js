@@ -6,7 +6,7 @@ import { color } from '../global-config';
 const Frame1 = () => {
     const [states, dispatch] = useStore();
     return (
-        <div className=" panel">
+        <section className=" panel">
             <Box sx={{
                 // backgroundColor: `${color.section1}`,
                 background: 'linear-gradient(to right bottom, #592988, #220e4a)',
@@ -44,7 +44,7 @@ const Frame1 = () => {
                     }}
                 />
             </Box>
-        </div>
+        </section>
     );
 };
 

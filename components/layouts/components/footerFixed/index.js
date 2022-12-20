@@ -5,8 +5,12 @@ import { color } from '../../../../global-config';
 import {img } from '../../../../global-config';
 import Button from '@mui/material/Button';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 function Footer() {
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
     return (
         <Box className="footer"
             sx={{
@@ -26,7 +30,7 @@ function Footer() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    padding: '0 72px',
+                    padding: matches ? '0 72px' : ' 0 24px',
                     [`@media(min-width: ${size.siteMaxWidth})`]: {
                         width: `${size.siteMaxWidth}`,
                     },

@@ -48,9 +48,9 @@ function MyApp({ stars, ...props }) {
                     property="twitter:image"
                     content="https://scontent.fvca1-2.fna.fbcdn.net/v/t39.30808-6/317898954_114387594836820_6884542898105072127_n.jpg?stp=dst-jpg_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=OCXodtrfCoQAX_5Xs81&_nc_ht=scontent.fvca1-2.fna&oh=00_AfCIcdDzcBKDRE4ER8fwSi5kM5baztgWsXSnWkLHjT2jSw&oe=6392C76C"
                 />
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=435" />
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js?r=897" />
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js?r=1789" />
+                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js" />
+                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js?" />
+                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js?" />
             </Head>
             <props.Component {...props.pageProps} />
 

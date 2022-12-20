@@ -76,8 +76,8 @@ export default function DropdownMenu() {
                 aria-expanded={open ? 'true' : undefined}
                 color="inherit"
                 sx={{
-                    color: '#fff',
-                    fontFamily: 'Space Grotesk, cursive',
+                    color: '#b1b5c3',
+                    fontFamily: 'Lacquer, Inter',
                     fontStyle: 'Regular',
                     fontSize: '20px',
                     lineHeight: '125%',
@@ -86,7 +86,7 @@ export default function DropdownMenu() {
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
             >
-                {contentMultipleLangs[states.locale].LANG}
+                {contentMultipleLangs[states.locale].LANGUAGE}
             </Button>
             <StyledMenu
                 id="demo-customized-menu"
@@ -103,10 +103,11 @@ export default function DropdownMenu() {
                         onClick={() => handleClickMenuItem(locale)}
                         disableRipple
                         sx={{
-                            fontFamily: 'Space Grotesk, cursive',
+                            fontFamily: 'Lacquer, Inter',
                             fontStyle: 'Regular',
                             fontSize: '20px',
                             lineHeight: '125%',
+                            padding: '1rem 2.5rem'
                         }}
                     >
                         {contentMultipleLangs[locale].LANGUAGE}

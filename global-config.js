@@ -9,7 +9,7 @@ export const color = {
 };
 export const size = {
     siteMaxWidth: '100%',
-    headerHeight: '99px',
+    headerHeight: '120px',
 };
 export const PRIMARY_COLOR_CLASS = 'PRIMARY-COLOR-CLASS';
 export const NORMAL_COLOR_CLASS = 'NORMAL-COLOR-CLASS';
@@ -19,7 +19,7 @@ export const NORMAL_COLOR_CLASS = 'NORMAL-COLOR-CLASS';
 
 export const contentMultipleLangs = {
     en: {
-        LANGUAGE: 'English',
+        LANGUAGE: 'EN',
         MARKETPLACE: 'Home',
         LOGIN: 'About Us',
         WHITEPAPER: 'Careers',
@@ -63,7 +63,7 @@ export const contentMultipleLangs = {
         CONTACT_US_DESCRIPTION: 'Drop us a message via this email',
     },
     vi: {
-        LANGUAGE: 'Tiếng Việt',
+        LANGUAGE: 'VI',
         MARKETPLACE: 'Trang Chủ',
         LOGIN: 'Về TekNix',
         WHITEPAPER: 'Tuyển Dụng',
