@@ -249,7 +249,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
@@ -291,7 +291,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
@@ -333,7 +333,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
@@ -375,7 +375,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
@@ -425,7 +425,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
@@ -544,7 +544,7 @@ export default function Home() {
                                                 minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '36%',
+                                                top: '30%',
                                                 left: '30%'
                                             }}
                                         />
