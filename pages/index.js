@@ -282,7 +282,7 @@ export default function Home() {
                                         <p>Sứ Mệnh</p>
                                         <h3 className='color-primary'>NỀN TẢNG</h3>
                                         <h3>TOÀN DIỆN</h3>
-                                        <p className='description'>Tại<b>TekNix</b>  chúng tôi kiến tạo những nền tảng công nghệ tối ưu, toàn diện, mang tính chất đột phá và ứng dụng cao.
+                                        <p className='description'>Tại <b>TekNix</b>  chúng tôi kiến tạo những nền tảng công nghệ tối ưu, toàn diện, mang tính chất đột phá và ứng dụng cao.
                                         </p>
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
