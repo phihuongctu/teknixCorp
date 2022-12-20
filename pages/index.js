@@ -234,7 +234,8 @@ export default function Home() {
                                         padding: matches ? '96px 15vw' : '24px',
                                         minHeight: '100vh',
                                         width: '100vw',
-                                        position: 'relative'
+                                        position: 'relative',
+
                                     }}>
                                         <p>Kiến Tạo Tương Lai</p>
                                         <h3 className='color-primary'>TEKNIX</h3>
@@ -244,8 +245,8 @@ export default function Home() {
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
-                                                width: '30%',
-                                                minWidth: '180px',
+                                                width: '35%',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -255,12 +256,12 @@ export default function Home() {
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
-                                                width: '20%',
-                                                minWidth: '180',
+                                                width: '25%',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>
@@ -286,8 +287,8 @@ export default function Home() {
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
-                                                width: '30%',
-                                                minWidth: '180px',
+                                                width: '35%',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -297,12 +298,12 @@ export default function Home() {
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
-                                                width: '20%',
-                                                minWidth: '180',
+                                                width: '25%',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>
@@ -329,7 +330,7 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '35%',
-                                                minWidth: '180px',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -340,11 +341,11 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '25%',
-                                                minWidth: '180',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>
@@ -371,7 +372,7 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '35%',
-                                                minWidth: '180px',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -382,11 +383,11 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '25%',
-                                                minWidth: '180',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>
@@ -421,7 +422,7 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '35%',
-                                                minWidth: '180px',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -432,11 +433,11 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '25%',
-                                                minWidth: '180',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>
@@ -515,27 +516,32 @@ export default function Home() {
                                                     <div className="">
                                                         Chi nhánh Cần Thơ: STS Tower, 11B Đại lộ Hòa Bình, Q. Ninh Kiều. TP. Cần Thơ
                                                     </div>
-
                                                 </Stack>
                                             </li>
                                             <li>
-                                                <Image
-                                                    width="32"
-                                                    height="32"
-                                                    src={EnvelopeSimple} alt="" />
-                                                info@teknixcorp.com</li>
+                                                <Link href='mailto:info@teknixcorp.com'>
+                                                    <Image
+                                                        width="32"
+                                                        height="32"
+                                                        src={EnvelopeSimple} alt="" />
+                                                    info@teknixcorp.com
+                                                </Link>
+                                             </li>
                                             <li>
-                                                <Image
-                                                    width="32"
-                                                    height="32"
-                                                    src={Phone} alt="" />
-                                                (+84) 901 001 079</li>
+                                                <Link href='phoneto:0901001079'>
+                                                    <Image
+                                                        width="32"
+                                                        height="32"
+                                                        src={Phone} alt="" />
+                                                    (+84) 901 001 079
+                                                </Link>
+                                           </li>
                                         </ul>
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '35%',
-                                                minWidth: '180px',
+                                                minWidth: '220px',
                                                 display: 'block',
                                                 position: 'absolute',
                                                 top: '36%',
@@ -546,11 +552,11 @@ export default function Home() {
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
                                                 width: '25%',
-                                                minWidth: '180',
+                                                minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
+                                                top: matches ? '42%' : '51%',
+                                                left: matches ? '58%' : '50%'
                                             }}
                                         />
                                     </Box>

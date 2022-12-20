@@ -68,7 +68,7 @@ function Header() {
                 <Box>
                     <Image
                         width="160"
-                        height="0"
+                        height="32"
                         className={`logo-zomland ${css}`}
                         src={`${svg('Logo-TekNixCorp.svg')}`} alt="" style={{
                             width: matches ? '160px' : ' 86px',

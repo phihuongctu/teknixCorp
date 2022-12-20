@@ -163,9 +163,13 @@ ul {
     padding-left: 0;
     list-style-type: none;
     li {
-         margin-top: 1.5rem;
+        margin-top: 1.5rem;
         display: flex;
         align-items: center;
+        a {
+            display: flex;
+            align-items: center;
+        }
         img {
             margin-right: 2rem;
         }
