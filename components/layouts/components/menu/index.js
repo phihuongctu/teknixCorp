@@ -18,7 +18,7 @@ function Menu() {
                 width: 'fit-content',
                 alignItems: 'center',
                 '& .item-header': {
-                    marginLeft: '48px',
+                    marginLeft: '2rem',
                 },
                 display: matches ? 'flex' : 'none'
             }}

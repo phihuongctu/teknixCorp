@@ -75,7 +75,7 @@ function Header() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'flex-end',
-                        marginLeft: '3rem'
+                        marginLeft: '2rem'
                     }}>
                         <DropdownSelect />
                         <Box className='toggle' onClick={handleClickOpen} sx={{
