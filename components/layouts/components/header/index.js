@@ -9,6 +9,7 @@ import DropdownSelect from '../../../select';
 import Menu from '../menu';
 import Image from 'next/image'
 
+
 function Header() {
     const [css, setCss] = useState('none');
 
@@ -26,18 +27,6 @@ function Header() {
     //responsive
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
-    // useEffect(() => {
-    //     const behavor = (e) => {
-    //         let y = document.querySelector('.test-scroll').scrollTop;
-    //         if (y > 0) {
-    //             setCss('block');
-    //         } else if (y == 0) {
-    //             setCss('none');
-    //         }
-    //     };
-    //     document.querySelector('.test-scroll').addEventListener('scroll', behavor);
-    //     return () => window.removeEventListener('scroll', behavor);
-    // }, []);
 
     return (
         <Box className='header'
@@ -50,7 +39,7 @@ function Header() {
                 alignItems: 'center',
                 top: 0,
                 left: 0,
-                zIndex:1
+                zIndex: 1
             }}
         >
             <Box
@@ -72,8 +61,8 @@ function Header() {
                         className={`logo-zomland ${css}`}
                         src={`${svg('Logo-TekNixCorp.svg')}`} alt="" style={{
                             width: matches ? '160px' : ' 86px',
-                            height:'100%'
-                        }}/>
+                            height: '100%'
+                        }} />
                 </Box>
                 <Box sx={{
                     display: 'flex',
@@ -108,21 +97,33 @@ function Header() {
                 onClose={handleClose}
                 style={{ maxWidth: "100%", maxHeight: "100%" }}
             >
-                <Box onClick={handleClose} variant="outlined"
-                    color="primary" sx={{
-                        borderRadius: '50%', minWidth: '48px', width: '48px', minHeight: '48px', display: 'grid',
-                        placeItems: 'center',
-                        alignSelf: 'end'
-                    }}
-                >
-                    <Image
-                        width="32"
-                        height="32"
-                        src={`${img('ic-close.png')}`} alt='' priority />
-                </Box>
+
                 <Box sx={{
-                    alignSelf: 'center'
+                    alignSelf: 'center',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    width: '100%',
                 }}>
+                    <Image
+                        width="160"
+                        height="32"
+                        className={`logo-zomland ${css}`}
+                        src={`${svg('Logo-TekNixCorp.svg')}`} alt="" style={{
+                            width: matches ? '160px' : ' 86px',
+                            height: '100%'
+                        }} />
+                    <Box onClick={handleClose} variant="outlined"
+                        color="primary" sx={{
+                            borderRadius: '50%', minWidth: '48px', width: '48px', minHeight: '48px', display: 'grid',
+                            placeItems: 'center',
+                            alignSelf: 'end'
+                        }}
+                    >
+                        <Image
+                            width="32"
+                            height="32"
+                            src={`${img('ic-close.png')}`} alt='' priority />
+                    </Box>
                 </Box>
                 <Menu />
             </Dialog>

@@ -7,16 +7,30 @@ import Image from 'next/image';
 import { color } from '../global-config';
 import MainLayout from '../components/layouts/main';
 import RootLayout from '../components/layouts/root';
-import MapPin from '/public/images/png-images/MapPin.png';
-import Phone from '/public/images/png-images/Phone.png';
-import EnvelopeSimple from '/public/images/png-images/EnvelopeSimple.png';
 import { actions, useStore } from '../store';
 import React from 'react';
 import { gsap } from "gsap/dist/gsap";
 import { Draggable } from "gsap/dist/Draggable";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-
+import MapPin from '/public/images/png-images/MapPin.png';
+import EnvelopeSimple from '/public/images/png-images/EnvelopeSimple.png';
+import Phone from '/public/images/png-images/Phone.png';
+import logoAppota from '/public/images/png-images/logo-appota.png';
+import logoGenexwifi from '/public/images/png-images/logo-genexwifi-1.png';
+import logoBcons from '/public/images/png-images/logo-bcons.png';
+import logoHitech from '/public/images/png-images/logo-hiitech-main.png';
+import logoHoangLong from '/public/images/png-images/logo-hoang-long-hotel.png';
+import logoHqg from '/public/images/png-images/logo-hqg.png';
+import logoMBbank from '/public/images/png-images/logo-mb-bank.png';
+import logoNVu from '/public/images/png-images/logo-nguyen-vu-store.png';
+import logoShinhan from '/public/images/png-images/logo-shinhan-bank.png';
+import logoSpt from '/public/images/png-images/logo-spt.png';
+import logoTPCom from '/public/images/png-images/logo-tpcom.png';
+import logoViettel from '/public/images/png-images/logo-viettel.png';
+import logoVNNic from '/public/images/png-images/logo-vnnic.png';
+import logoVnpt from '/public/images/png-images/logo-vnpt.png';
+import logoVnso from '/public/images/png-images/logo-vnso.png';
 
 
 export default function Home() {
@@ -196,7 +210,7 @@ export default function Home() {
                     height: '100%'
                 }}
                 >
-                    <Link href="" style={{
+                    <Link href="https://www.facebook.com/teknixcorp" target="_blank" style={{
                         display: matches ? 'block' : 'none',
                         position: 'absolute',
                         left: 0,
@@ -444,10 +458,9 @@ export default function Home() {
                                 </section>
                                 <section className='section-6'>
                                     <Box sx={{
-                                        // backgroundColor: `${color.section1}`,
                                         background: 'linear-gradient(to right bottom, #d0ffee, #fff)',
                                         display: 'flex',
-                                        alignItems: 'left',
+                                        alignItems: 'center',
                                         justifyContent: 'center',
                                         flexDirection: 'column',
                                         padding: matches ? '96px 15vw' : '24px',
@@ -455,11 +468,180 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Kiến Tạo Tương Lai</p>
-                                        <h3 className='color-primary'>TEKNIX</h3>
-                                        <h3>CORPORATION</h3>
-                                        <p className='description'><b>TekNix Corporation</b> là công ty công nghệ chuyên cung cấp các phần mềm, ứng dụng, giải pháp công nghệ thông tin cho doanh nghiệp và người dùng.
-                                        </p>
+                                        <h3 className='color-primary'>Đối Tác</h3>
+                                        <Box sx={{
+                                            display: 'grid',
+                                            justifyItems: 'center',
+                                            alignItems: 'start',
+                                            gridTemplateColumns: 'repeat(2, minmax(auto, 1fr))',
+                                            marginTop: '3rem',
+                                            rowGap: '3rem',
+                                            columnGap: '2rem',
+                                            width: '100%'
+                                        }}>
+                                            <Stack alignItems='center'>
+                                                <h4>Viễn Thông</h4>
+                                                <Stack direction='row' sx={{
+                                                    flexWrap: 'wrap',
+                                                    marginTop: '1rem',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center'
+                                                }}>
+                                                    <Image
+                                                        width="0"
+                                                        height="0"
+                                                        src={logoVNNic} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoVnpt} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoTPCom} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoSpt} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoViettel} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                </Stack>
+                                            </Stack>
+                                            <Stack alignItems='center'>
+                                                <h4 >Công Nghệ</h4>
+                                                <Stack direction='row' sx={{
+                                                    flexWrap: 'wrap',
+                                                    marginTop: '1rem',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center'
+                                                }}>
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoHqg} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoGenexwifi} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoVnso} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoHitech} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                </Stack>
+                                            </Stack >
+                                            <Stack alignItems='center'>
+                                                <h4 >Tài Chính</h4>
+                                                <Stack direction='row' sx={{
+                                                    flexWrap: 'wrap',
+                                                    marginTop: '1rem',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center'
+                                                }}>
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoMBbank} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoShinhan} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoAppota} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                </Stack>
+                                            </Stack>
+                                            <Stack alignItems='center'>
+                                                <h4 >Thương Mại</h4>
+                                                <Stack direction='row' sx={{
+                                                    flexWrap: 'wrap',
+                                                    marginTop: '1rem',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center'
+                                                }}>
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoNVu} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoHoangLong} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                    <Image
+                                                        width="200"
+                                                        height="100"
+                                                        src={logoBcons} alt="" style={{
+                                                            width: '50%',
+                                                            height: '100%',
+                                                            maxWidth: '200px'
+                                                        }} />
+                                                </Stack>
+                                            </Stack>
+                                        </Box>
+
+
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -503,7 +685,7 @@ export default function Home() {
                                         <br></br>
                                         <ul className='list-address'>
                                             <li style={{
-                                                alignItems : 'flex-start'
+                                                alignItems: 'flex-start'
                                             }}>
                                                 <Image
                                                     width="32"
@@ -526,7 +708,7 @@ export default function Home() {
                                                         src={EnvelopeSimple} alt="" />
                                                     info@teknixcorp.com
                                                 </Link>
-                                             </li>
+                                            </li>
                                             <li>
                                                 <Link href='phoneto:0901001079'>
                                                     <Image
@@ -535,7 +717,7 @@ export default function Home() {
                                                         src={Phone} alt="" />
                                                     (+84) 901 001 079
                                                 </Link>
-                                           </li>
+                                            </li>
                                         </ul>
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}

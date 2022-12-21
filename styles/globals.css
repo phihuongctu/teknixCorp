@@ -140,6 +140,12 @@ a {
   color: #b1b5c3;
 }
 
+@media screen and (max-width: 900px) {
+  .item-header a {
+    font-size: 1rem;
+  }
+}
+
 .fp-watermark {
   display: none !important;
 }
@@ -178,6 +184,11 @@ ul {
 
 ul li {
   margin-top: 0.5rem;
+}
+
+h4 {
+  font-size: clamp(18px, 4vw, 32px);
+  color: #525252;
 }
 
 .list-address {

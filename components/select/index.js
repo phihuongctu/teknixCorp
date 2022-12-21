@@ -7,8 +7,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { contentMultipleLangs } from '../../global-config';
 import { Box } from '@mui/material';
 import { actions, useStore } from '../../store';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
 
 const StyledMenu = styled((props) => (
+
     <Menu
         elevation={0}
         anchorOrigin={{
@@ -52,6 +56,8 @@ const setACookie = (cName, cValue, exDays, path = '/') => {
 };
 
 export default function DropdownMenu() {
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
     const [states, dispatch] = useStore();
     const locales = Object.keys(contentMultipleLangs);
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -79,7 +85,7 @@ export default function DropdownMenu() {
                     color: '#b1b5c3',
                     fontFamily: 'Lacquer, Inter',
                     fontStyle: 'Regular',
-                    fontSize: '20px',
+                    fontSize: matches ? '20px' : '16px',
                     lineHeight: '125%',
                 }}
                 disableElevation
