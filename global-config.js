@@ -127,7 +127,7 @@ export const contentMultipleLangs = {
         },
         Section_6:
         {
-            TITLE_1: 'Đối Tác',
+            TITLE_1: 'Telecom',
             TITLE_2: 'Công Nghệ',
             TITLE_3: 'Tài Chính',
             TITLE_4: 'Thương Mại',
