@@ -8,8 +8,10 @@ import { color } from '../global-config';
 import MainLayout from '../components/layouts/main';
 import RootLayout from '../components/layouts/root';
 import { actions, useStore } from '../store';
+import BoxText from '../components/layouts/components/boxText';
 import React from 'react';
 import { gsap } from "gsap/dist/gsap";
+import { contentMultipleLangs } from '../global-config';
 import { Draggable } from "gsap/dist/Draggable";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -251,11 +253,9 @@ export default function Home() {
                                         position: 'relative',
 
                                     }}>
-                                        <p>Kiến Tạo Tương Lai</p>
-                                        <h3 className='color-primary'>TEKNIX</h3>
-                                        <h3>CORPORATION</h3>
-                                        <p className='description' ><b>TekNix Corporation</b> là công ty công nghệ chuyên cung cấp các phần mềm, ứng dụng, giải pháp công nghệ thông tin cho doanh nghiệp và người dùng.
-                                        </p>
+
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES}/>
+
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -293,11 +293,7 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Sứ Mệnh</p>
-                                        <h3 className='color-primary'>NỀN TẢNG</h3>
-                                        <h3>TOÀN DIỆN</h3>
-                                        <p className='description'>Tại <b>TekNix</b>  chúng tôi kiến tạo những nền tảng công nghệ tối ưu, toàn diện, mang tính chất đột phá và ứng dụng cao.
-                                        </p>
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_2.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_2.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_2.TITLE_3} DES={contentMultipleLangs[states.locale].Section_2.DES} />
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -335,11 +331,7 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Tầm Nhìn</p>
-                                        <h3 className='color-primary'>CÔNG NGHỆ</h3>
-                                        <h3>HÀNG ĐẦU</h3>
-                                        <p className='description'>Với ứng dụng công nghệ vượt trội <b>TekNix</b>  khát khao vươn mình  trở thành công ty giải pháp công nghệ hàng đầu mang tới những sản phẩm khác biệt đóng góp cho cộng đồng.
-                                        </p>
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_3.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_3.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_3.TITLE_3} DES={contentMultipleLangs[states.locale].Section_3.DES} />
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -377,11 +369,7 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Giá Trị Cốt Lõi</p>
-                                        <h3 className='color-primary'>TIÊN PHONG</h3>
-                                        <h3>ĐỔI MỚI</h3>
-                                        <p className='description'>Với đam mê sáng tạo và tinh thần kiến tạo, <b>TekNix </b>  luôn không ngừng nghiên cứu, đổi mới và phát triển những sản phẩm số có giá trị thiết thực và bền vững.
-                                        </p>
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_4.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_4.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_4.TITLE_3} DES={contentMultipleLangs[states.locale].Section_4.DES} />
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -419,18 +407,14 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Sản Phẩm Và Dịch Vụ</p>
-                                        <h3 className='color-primary'>GIẢI PHÁP</h3>
-                                        <h3>TỐI ƯU</h3>
-                                        <p className='description'><b>TekNix</b>  tự tin là đơn vị cung cấp các giải pháp công nghệ thông minh và đột phá với hệ giải pháp tổng thể và đa chuỗi, bao gồm:
-                                        </p>
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_5.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_5.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_5.TITLE_3} DES={contentMultipleLangs[states.locale].Section_5.DES} />
                                         <br></br>
                                         <ul>
-                                            <li> Giải pháp hạ tâng</li>
-                                            <li> Giải pháp thương mại điện tử</li>
-                                            <li> Giải pháp Fintech</li>
-                                            <li> Ứng dụng Blockchain</li>
-                                            <li> Tư vấn cung cấp nhân sự và vận hành</li>
+                                            <li> {contentMultipleLangs[states.locale].Section_5.ITEM_1} </li>
+                                            <li> {contentMultipleLangs[states.locale].Section_5.ITEM_2}</li>
+                                            <li> {contentMultipleLangs[states.locale].Section_5.ITEM_3}</li>
+                                            <li> {contentMultipleLangs[states.locale].Section_5.ITEM_4}</li>
+                                            <li> {contentMultipleLangs[states.locale].Section_5.ITEM_5}</li>
                                         </ul>
                                         <img className='bubble' id='bee'
                                             src={`${img('Bubble-Network.png')}`}
@@ -468,7 +452,7 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <h3 className='color-primary'>Đối Tác</h3>
+                                        <h3 className='color-primary'>{contentMultipleLangs[states.locale].Section_6.TITLE_5} </h3>
                                         <Box sx={{
                                             display: 'grid',
                                             justifyItems: 'center',
@@ -480,7 +464,7 @@ export default function Home() {
                                             width: '100%'
                                         }}>
                                             <Stack alignItems='center'>
-                                                <h4>Viễn Thông</h4>
+                                                <h4>{contentMultipleLangs[states.locale].Section_6.TITLE_1} </h4>
                                                 <Stack direction='row' sx={{
                                                     flexWrap: 'wrap',
                                                     marginTop: '1rem',
@@ -530,7 +514,7 @@ export default function Home() {
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
-                                                <h4 >Công Nghệ</h4>
+                                                <h4 >{contentMultipleLangs[states.locale].Section_6.TITLE_2} </h4>
                                                 <Stack direction='row' sx={{
                                                     flexWrap: 'wrap',
                                                     marginTop: '1rem',
@@ -572,7 +556,7 @@ export default function Home() {
                                                 </Stack>
                                             </Stack >
                                             <Stack alignItems='center'>
-                                                <h4 >Tài Chính</h4>
+                                                <h4 >{contentMultipleLangs[states.locale].Section_6.TITLE_3} </h4>
                                                 <Stack direction='row' sx={{
                                                     flexWrap: 'wrap',
                                                     marginTop: '1rem',
@@ -606,7 +590,7 @@ export default function Home() {
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
-                                                <h4 >Thương Mại</h4>
+                                                <h4 >{contentMultipleLangs[states.locale].Section_6.TITLE_4} </h4>
                                                 <Stack direction='row' sx={{
                                                     flexWrap: 'wrap',
                                                     marginTop: '1rem',
@@ -679,9 +663,7 @@ export default function Home() {
                                         width: '100vw',
                                         position: 'relative'
                                     }}>
-                                        <p>Liên hệ Với Chúng Tôi</p>
-                                        <h3 className='color-primary'>TEKNIX</h3>
-                                        <h3>CORPORATION</h3>
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_7.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_7.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_7.TITLE_3} />
                                         <br></br>
                                         <ul className='list-address'>
                                             <li style={{
@@ -693,10 +675,10 @@ export default function Home() {
                                                     src={MapPin} alt="" />
                                                 <Stack spacing={2}>
                                                     <div className="">
-                                                        Trụ sở: Số 194C Pasteur, Phường Võ Thị Sáu, Quận 3, TP Hồ Chí Minh
+                                                        {contentMultipleLangs[states.locale].Section_7.ADDRESS_1}
                                                     </div>
                                                     <div className="">
-                                                        Chi nhánh Cần Thơ: STS Tower, 11B Đại lộ Hòa Bình, Q. Ninh Kiều. TP. Cần Thơ
+                                                        {contentMultipleLangs[states.locale].Section_7.ADDRESS_2}
                                                     </div>
                                                 </Stack>
                                             </li>

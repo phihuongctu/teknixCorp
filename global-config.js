@@ -5,7 +5,7 @@ export const color = {
     primaryBackground: 'rgba(206, 166, 89, 0.1)',
     lightText: 'rgba(147, 152, 154, 0.9)',
     darkText: '#000',
-    section1:'#542682'
+    section1: '#542682'
 };
 export const size = {
     siteMaxWidth: '100%',
@@ -14,98 +14,133 @@ export const size = {
 export const PRIMARY_COLOR_CLASS = 'PRIMARY-COLOR-CLASS';
 export const NORMAL_COLOR_CLASS = 'NORMAL-COLOR-CLASS';
 
-//fontFamily: 'Space Grotesk, cursive',
-//fontFamily='Oxanium, cursive'
-
 export const contentMultipleLangs = {
     en: {
         LANGUAGE: 'EN',
-        MARKETPLACE: 'Home',
-        LOGIN: 'About Us',
-        WHITEPAPER: 'Careers',
+        Home: 'Home',
+        About: 'About Us',
+        Careers: 'Careers',
         LANG: 'LANG',
-        CUSTOMIZE_YOUR_GAMING_EXPERIENCES_ON_THE_BLOCKCHAIN: 'CUSTOMIZE YOUR GAMING EXPERIENCES ON THE BLOCKCHAIN',
-        ZOMLAND_STORY: 'ZOMLAND STORY',
-        ZOMLAND_STORY_DESCRIPTION:
-            'Set in the medieval times, at the peaceful land of Everland under the reign of King Etronos. One day, King Etronos asked his courtiers to find a cure to help him live forever to rule this beautiful kingdom of Everland...',
-        READ_MORE: 'Read more',
-        IS_ABOUT_THE_WORLD: 'is about the world of Zombies',
-        WITH_MANY_DIFFERENT: 'with many different game genres',
-        ZOMLAND_ECOSYSTEM: 'ZOMLAND ECOSYSTEM',
-        ZOMLAND_ECOSYSTEM_DESCRIPTION: 'Zomland is about the world of Zombies with many different game genres.',
-        CHAPTER_1: 'CHAPTER 1: AIR DROP',
-        CHAPTER_2: 'CHAPTER II: RUN TO EARN',
-        CHAPTER_3: 'CHAPTER III: BATTLE',
-        CHAPTER_4: 'CHAPTER IV: COMING SOON',
-        CHAPTER_DES:
-            'Zomland builds an unique character NFT system that circulates in different games in the Zomland ecosystem and even open to other games and networks.',
-        TOKEN_UNITY: 'TOKEN UNITY',
-        COIN_CONTENT: [
-            {
-                COIN_TITLE_1: 'Buy & Sell NFT',
-                COIN_TITLE_2: 'Trading on DEX, CEX',
-                COIN_NAME: '$ZBC',
-                COIN_DES: '(Main utility coin)',
-            },
-            {
-                COIN_TITLE_1: 'Buy Keys',
-                COIN_TITLE_2: 'Buy Food, Drink items',
-                COIN_NAME: '$ZBB',
-                COIN_DES: '(In-game coin)',
-            },
-        ],
-        OPTIMIZED_FINANCIAL_SYSTEM: 'OPTIMIZED FINANCIAL SYSTEM',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_1:
-            'Unlike the usual game operating model, Zomland provides an optimal financial system to help',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_IN_A_TAG: ' players make investment flexibly and make transfers easily',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_2: 'in the marketplace and accompany the project.',
-        CONTACT_US: 'CONTACT US',
-        CONTACT_US_DESCRIPTION: 'Drop us a message via this email',
+        Section_1:
+        {
+            TITLE_1: 'Innovate The Future',
+            TITLE_2: 'TEKNIX',
+            TITLE_3: 'CORPORATION',
+            DES: 'TekNix  is an information technology company providing tech products, applications and solutions for businesses and users.',
+        },
+        Section_3:
+        {
+            TITLE_1: 'Vision',
+            TITLE_2: 'LEADING',
+            TITLE_3: 'Technology',
+            DES: 'With outstanding technology applications, TekNix  aspires to become the leading tech solution company that brings unique products to contribute to the society. ',
+        },
+        Section_2:
+        {
+            TITLE_1: 'Misson',
+            TITLE_2: 'Comprehensive',
+            TITLE_3: 'Platforms',
+            DES: 'At TekNix, we create optimal technology platforms and breakthrough products with high applicability.',
+        },
+        Section_4:
+        {
+            TITLE_1: 'Core Values',
+            TITLE_2: 'Pioneering',
+            TITLE_3: 'Innovations',
+            DES: 'With a passion for creation and a spirit of innovation, TekNix is constantly researching and developing digital solutions with highly pratical and sustainable values.',
+        },
+        Section_5:
+        {
+            TITLE_1: 'Products & Services',
+            TITLE_2: 'Optimal',
+            TITLE_3: 'Solutions',
+            DES: 'TekiNix is confident to be 1-stop provider of smart and breakthrough technology solutions with a multi-chain ecosystem including:',
+            ITEM_1: 'Network infrastructure solutions',
+            ITEM_2: 'E-commerce solutions',
+            ITEM_3: 'Fintech solutions',
+            ITEM_4: 'Blockchain & Dapps',
+            ITEM_5: 'Technology consulting services',
+
+        },
+        Section_6:
+        {
+            TITLE_1: 'Telecom',
+            TITLE_2: 'Technology',
+            TITLE_3: 'Finance',
+            TITLE_4: 'Commerce',
+            TITLE_5: 'PARTNER',
+        },
+        Section_7:
+        {
+            TITLE_1: 'Contact us',
+            TITLE_2: 'TEKNIX',
+            TITLE_3: 'CORPORATION',
+            ADDRESS_1: 'Headquarter: No. 194C Pasteur, Vo Thi Sau Ward, District 3, Ho Chi Minh City ',
+            ADDRESS_2: 'Can Tho Branch: STS Tower, 11B Hoa Binh Street, Ninh Kieu District, Can Tho City'
+        },
     },
     vi: {
         LANGUAGE: 'VI',
-        MARKETPLACE: 'Trang Chủ',
-        LOGIN: 'Về TekNix',
-        WHITEPAPER: 'Tuyển Dụng',
+        Home: 'Trang Chủ',
+        About: 'Về TekNix',
+        Careers: 'Tuyển Dụng',
         LANG: 'NGÔN NGỮ',
-        CUSTOMIZE_YOUR_GAMING_EXPERIENCES_ON_THE_BLOCKCHAIN:
-            'TÙY CHỈNH TRẢI NGHIỆM CHƠI TRÒ CHƠI CỦA BẠN TRÊN BLOCKCHAIN',
-        ZOMLAND_STORY: 'CÂU CHUYỆN ZOMLAND',
-        ZOMLAND_STORY_DESCRIPTION:
-            'Lấy bối cảnh thời trung cổ, tại vùng đất yên bình Everland dưới sự trị vì của vua Etronos. Một ngày nọ, vua Etronos yêu cầu các cận thần của mình tìm ra phương thuốc giúp ông sống mãi mãi để trị vì vương quốc Everland xinh đẹp này...',
-        READ_MORE: 'Xem thêm',
-        IS_ABOUT_THE_WORLD: 'là về thế giới của Zombies',
-        WITH_MANY_DIFFERENT: 'với nhiều thể loại trò chơi khác nhau',
-        ZOMLAND_ECOSYSTEM: 'HỆ SINH THÁI ZOMLAND',
-        ZOMLAND_ECOSYSTEM_DESCRIPTION: 'Zomland kể về thế giới Zombie với nhiều thể loại game khác nhau.',
-        CHAPTER_1: 'CHƯƠNG 1: GIỌT KHÔNG KHÍ',
-        CHAPTER_2: 'CHƯƠNG II: CHẠY ĐỂ KIẾM TIỀN',
-        CHAPTER_3: 'CHƯƠNG III: CUỘC CHIẾN',
-        CHAPTER_4: 'CHƯƠNG IV: SẮP TỚI',
-        CHAPTER_DES:
-            'Zomland xây dựng một hệ thống NFT nhân vật độc đáo lưu hành trong các trò chơi khác nhau trong hệ sinh thái Zomland và thậm chí mở cho các trò chơi và mạng khác.',
-        TOKEN_UNITY: 'TOKEN ĐOÀN KẾT',
-        COIN_CONTENT: [
-            {
-                COIN_TITLE_1: 'Mua & Bán NFT',
-                COIN_TITLE_2: 'Giao dịch trên DEX, CEX',
-                COIN_NAME: '$ZBC',
-                COIN_DES: '(Tiền tiện ích chính)',
-            },
-            {
-                COIN_TITLE_1: 'Mua khóa',
-                COIN_TITLE_2: 'Mua Đồ ăn, Đồ uống',
-                COIN_NAME: '$ZBB',
-                COIN_DES: '(xu-trong trò chơi)',
-            },
-        ],
-        OPTIMIZED_FINANCIAL_SYSTEM: 'HỆ THỐNG TÀI CHÍNH TỐI ƯU',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_1:
-            'Khác với mô hình vận hành game thông thường, Zomland cung cấp một hệ thống tài chính tối ưu giúp',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_IN_A_TAG: ' người chơi đầu tư linh hoạt và chuyển khoản dễ dàng',
-        OPTIMIZED_FINANCIAL_SYSTEM_DES_2: 'trên thương trường và đồng hành cùng dự án.',
-        CONTACT_US: 'LIÊN HỆ CHÚNG TÔI',
-        CONTACT_US_DESCRIPTION: 'Gửi cho chúng tôi một tin nhắn qua email này',
+        Section_1:
+        {
+            TITLE_1: 'Kiến Tạo Tương Lai',
+            TITLE_2: 'TEKNIX',
+            TITLE_3: 'CORPORATION',
+            DES: 'TekNix Corporation là công ty công nghệ chuyên cung cấp các phần mềm, ứng dụng, giải pháp công nghệ thông tin cho doanh nghiệp và người dùng.',
+        },
+        Section_2:
+        {
+            TITLE_1: 'Sứ Mệnh',
+            TITLE_2: 'NỀN TẢNG',
+            TITLE_3: 'TOÀN DIỆN',
+            DES: 'Tại TekNix Corporation chúng tôi kiến tạo những nền tảng công nghệ tối ưu, toàn diện, mang tính chất đột phá và ứng dụng cao.',
+        },
+        Section_3:
+        {
+            TITLE_1: 'Tầm Nhìn',
+            TITLE_2: 'CÔNG NGHỆ',
+            TITLE_3: 'HÀNG ĐẦU',
+            DES: 'Với ứng dụng công nghệ vượt trội TekNix Corporation  khát khao vươn mình  trở thành công ty giải pháp công nghệ hàng đầu mang tới những sản phẩm khác biệt đóng góp cho cộng đồng.',
+        },
+        Section_4:
+        {
+            TITLE_1: 'Giá Trị Cốt Lõi',
+            TITLE_2: 'TIÊN PHONG',
+            TITLE_3: 'ĐỔI MỚI',
+            DES: 'Với đam mê sáng tạo và tinh thần kiến tạo, TekNix Corporation luôn không ngừng nghiên cứu, đổi mới và phát triển những sản phẩm số có giá trị thiết thực và bền vững.',
+        },
+        Section_5:
+        {
+            TITLE_1: 'Sản Phẩm Và Dịch Vụ',
+            TITLE_2: 'GIẢI PHÁP',
+            TITLE_3: 'TỐI ƯU',
+            DES: 'TekNix tự tin là đơn vị cung cấp các giải pháp công nghệ thông minh và đột phá với hệ giải pháp tổng thể và đa chuỗi, bao gồm:',
+            ITEM_1:' Giải pháp hạ tâng',
+            ITEM_2: ' Giải pháp thương mại điện tử',
+            ITEM_3: ' Giải pháp Fintech',
+            ITEM_4: ' Ứng dụng Blockchain',
+            ITEM_5: ' Tư vấn cung cấp nhân sự và vận hành',
+        },
+        Section_6:
+        {
+            TITLE_1: 'Đối Tác',
+            TITLE_2: 'Công Nghệ',
+            TITLE_3: 'Tài Chính',
+            TITLE_4: 'Thương Mại',
+            TITLE_5: 'Đối Tác',
+        },
+        Section_7:
+        {
+            TITLE_1: 'Liên hệ Với Chúng Tôi',
+            TITLE_2: 'TEKNIX',
+            TITLE_3: 'CORPORATION',
+            ADDRESS_1:'Trụ sở: Số 194C Pasteur, Phường Võ Thị Sáu, Quận 3, TP Hồ Chí Minh',
+            ADDRESS_2: 'Chi nhánh Cần Thơ: STS Tower, 11B Đại lộ Hòa Bình, Q. Ninh Kiều. TP. Cần Thơ'
+        },
     },
 };
 

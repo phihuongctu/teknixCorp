@@ -33,7 +33,7 @@ function Menu() {
                     lineHeight: '125%',
                 }}
             >
-                <Link href="/marketplace">{contentMultipleLangs[states.locale].MARKETPLACE}</Link>
+                <Link href="/marketplace">{contentMultipleLangs[states.locale].Home}</Link>
             </Box>
             <Box
                 className="item-header"
@@ -45,7 +45,7 @@ function Menu() {
                     lineHeight: '125%',
                 }}
             >
-                <Link href="#">{contentMultipleLangs[states.locale].LOGIN}</Link>
+                <Link href="#">{contentMultipleLangs[states.locale].About}</Link>
             </Box>
             <Box
                 className="item-header"
@@ -57,7 +57,7 @@ function Menu() {
                     lineHeight: '125%',
                 }}
             >
-                <Link href="/">{contentMultipleLangs[states.locale].WHITEPAPER}</Link>
+                <Link href="/">{contentMultipleLangs[states.locale].Careers}</Link>
             </Box>
         </Box>
     )

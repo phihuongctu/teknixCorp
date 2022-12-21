@@ -114,15 +114,18 @@ function Header() {
                         }} />
                     <Box onClick={handleClose} variant="outlined"
                         color="primary" sx={{
-                            borderRadius: '50%', minWidth: '48px', width: '48px', minHeight: '48px', display: 'grid',
+                            borderRadius: '50%', minWidth: '2rem', width: '2rem', minHeight: '2rem', display: 'grid',
                             placeItems: 'center',
-                            alignSelf: 'end'
+                            alignSelf: 'end',
+                            fontSize: '1rem',
+                            background:'#fff'
                         }}
                     >
-                        <Image
+                        X
+                        {/* <Image
                             width="32"
                             height="32"
-                            src={`${img('ic-close.png')}`} alt='' priority />
+                            src={`${img('ic-close.png')}`} alt='' priority /> */}
                     </Box>
                 </Box>
                 <Menu />

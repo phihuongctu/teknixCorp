@@ -10,8 +10,6 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  color: white;
   overflow: hidden;
 }
 
@@ -157,6 +155,7 @@ a {
 h3 {
   font-size: clamp(32px, 4vw, 130px);
   margin-top: 1rem;
+  text-transform: uppercase;
 }
 
 p {
