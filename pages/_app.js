@@ -50,7 +50,7 @@ function MyApp({ stars, ...props }) {
                 />
                 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js" />
                 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js?" />
-                <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js" />
+                {/* <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js" /> */}
             </Head>
             <props.Component {...props.pageProps} />
 

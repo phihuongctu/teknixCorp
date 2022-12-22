@@ -160,21 +160,22 @@ export default function Home() {
         window.addEventListener("resize", newSize);
 
         // make the container a draggable element
-        let dragMe = Draggable.create(container, {
-            type: "y",
-            edgeResistance: 1,
-            onDragEnd: slideAnim,
-            onDrag: tweenDot,
-            onThrowUpdate: tweenDot,
-            snap: offsets,
-            inertia: true,
-            zIndexBoost: false,
-            allowNativeTouchScrolling: false,
-            bounds: "#masterWrap"
-        });
 
-        dragMe[0].id = "dragger";
-        newSize();
+        // let dragMe = Draggable.create(container, {
+        //     type: "y",
+        //     edgeResistance: 1,
+        //     onDragEnd: slideAnim,
+        //     onDrag: tweenDot,
+        //     onThrowUpdate: tweenDot,
+        //     snap: 0.5,
+        //     inertia: false,
+        //     zIndexBoost: false,
+        //     allowNativeTouchScrolling: false,
+        //     bounds: "#masterWrap"
+        // });
+
+        // dragMe[0].id = "dragger";
+        // newSize();
 
         // resize all panels and refigure draggable snap array
         function newSize() {
@@ -186,7 +187,7 @@ export default function Home() {
                 offsets.push(-slides[i].offsetTop);
             }
             gsap.set(container, { y: offsets[activeSlide] });
-            dragMe[0].vars.snap = offsets;
+            // dragMe[0].vars.snap = offsets;
         }
 
         // tween the dot animation as the draggable moves
@@ -195,10 +196,6 @@ export default function Home() {
                 time: Math.abs(gsap.getProperty(container, "y") / ih) + 1
             });
         }
-
-
-
-
 
     }, []);
     useEffect(() => {
