@@ -125,7 +125,7 @@ a {
 .item-header a {
     font-size: 20px;
     color: #b1b5c3;
-        @media screen and (max-width: 900px) {
+    @media screen and (max-width: 900px) {
         font-size: 1rem;
     }
 }
@@ -161,7 +161,7 @@ ul {
         margin-top: 0.5rem;
     }
 }
-h4{
+h4 {
     font-size: clamp(18px, 4vw, 32px);
     color: #525252;
 }
@@ -229,17 +229,17 @@ h4{
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
 }
-
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-
-    body {
-        color: white;
-        /* background: black; */
-    }
+body {
+    color: white;
+    /* background: black; */
 }
+
+// @media (prefers-color-scheme: dark) {
+// //     html {
+// //         color-scheme: dark;
+// //     }
+
+// }
 
 ::-webkit-scrollbar {
     width: 0px;
