@@ -673,7 +673,6 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_7.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_7.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_7.TITLE_3} />
-                                        <br></br>
                                         <ul className='list-address'>
                                             <li style={{
                                                 alignItems: 'flex-start'
