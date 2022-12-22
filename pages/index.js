@@ -39,7 +39,7 @@ export default function Home() {
     const [states, dispatch] = useStore();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
-    // console.clear()
+    console.clear()
     // const el = useRef(null);
     // const child = gsap.utils.selector(el);
     useEffect(() => {
