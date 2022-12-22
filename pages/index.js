@@ -43,11 +43,9 @@ export default function Home() {
     // console.clear()
     // const el = useRef(null);
     // const child = gsap.utils.selector(el);
-
-    // check mobile
-    isMobile ? null :
+    if (!isMobile){
         useEffect(() => {
-
+            dispatch(actions.setLocales());
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
             const slides = document.querySelectorAll("section");
             const container = document.querySelector("#panelWrap");
@@ -202,10 +200,14 @@ export default function Home() {
                 });
             }
 
-        }, [])
-    useEffect(() => {
-        dispatch(actions.setLocales());
-    }, []);
+        }, []);
+    } else{
+        useEffect(() => {
+            dispatch(actions.setLocales());
+        }, []);
+    }
+    // check mobile
+
 
     return (
         <RootLayout>
@@ -226,6 +228,7 @@ export default function Home() {
                         fontWeight: 500,
                         color: '#b1b5c3'
                     }}>FACEBOOK</Link>
+
                     <div className="hideMe">
                         {/* <svg id="downArrow" className="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                             <g stroke-linejoin="round" stroke-linecap="round" >
@@ -239,15 +242,15 @@ export default function Home() {
                                 <polyline points="25 60, 50 30, 75 60" ></polyline>
                             </g>
                         </svg> */}
+
                         <div id="masterWrap">
-                            <Box id="panelWrap" sx={{
-                                overflowY: isMobile ? 'auto' : null,
-                                overflowX: isMobile ? 'hidden' : null,
-                                scrollSnapType: isMobile ? 'y mandatory' : null,
-                                '& section': {
-                                    scrollSnapAlign: 'center'
-                                }
-                            }}>
+                            <div id="panelWrap"
+                            style={{
+                                overflowY: matches ? 'unset' : 'auto',
+                                overflowX: matches ? 'unset' : 'hidden',
+                                scrollSnapType: matches ? 'unset' : 'y mandatory',
+                            }}
+                             >
                                 <section className='section-1'>
                                     <Box sx={{
                                         // backgroundColor: `${color.section1}`,
@@ -673,6 +676,7 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_7.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_7.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_7.TITLE_3} />
+
                                         <ul className='list-address'>
                                             <li style={{
                                                 alignItems: 'flex-start'
@@ -733,8 +737,9 @@ export default function Home() {
                                         />
                                     </Box>
                                 </section>
-                            </Box>
+                            </div>
                         </div>
+
                         <div class="dots">
                         </div>
                         <div className="toolTips">
@@ -761,5 +766,5 @@ export default function Home() {
                 </Box>
             </MainLayout>
         </RootLayout>
-    );
+    )
 }
