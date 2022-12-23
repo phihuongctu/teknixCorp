@@ -5,12 +5,14 @@ import { useStore } from '../../../../store';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { contentMultipleLangs } from '../../../../global-config';
-
+import { useRouter } from 'next/router';
 
 function Menu() {
+    const { asPath } = useRouter()
     const [states, dispatch] = useStore();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
+
     return (
         <Box className='menu'
             sx={{
@@ -33,7 +35,7 @@ function Menu() {
                     lineHeight: '125%',
                 }}
             >
-                <Link href="/">{contentMultipleLangs[states.locale].Home}</Link>
+                <Link href="/" className = {asPath == '/' ? 'color-primary' : null}>{contentMultipleLangs[states.locale].Home}</Link>
             </Box>
             <Box
                 className="item-header"
@@ -45,7 +47,7 @@ function Menu() {
                     lineHeight: '125%',
                 }}
             >
-                <Link href="/">{contentMultipleLangs[states.locale].About}</Link>
+                <Link href="/" >{contentMultipleLangs[states.locale].About}</Link>
             </Box>
             <Box
                 className="item-header"

@@ -1,10 +1,8 @@
-
 import { useEffect } from 'react';
 import { img } from '../global-config';
 import { Box, Stack } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-import { color } from '../global-config';
 import MainLayout from '../components/layouts/main';
 import RootLayout from '../components/layouts/root';
 import { actions, useStore } from '../store';
@@ -13,6 +11,7 @@ import React from 'react';
 import { gsap } from "gsap/dist/gsap";
 import { contentMultipleLangs } from '../global-config';
 import { Draggable } from "gsap/dist/Draggable";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import MapPin from '/public/images/png-images/MapPin.png';
@@ -37,13 +36,15 @@ import { isMobile } from 'react-device-detect';
 
 
 export default function Home() {
+
     const [states, dispatch] = useStore();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
     // console.clear()
+
     // const el = useRef(null);
     // const child = gsap.utils.selector(el);
-    if (!isMobile){
+    if (!isMobile) {
         useEffect(() => {
             dispatch(actions.setLocales());
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
@@ -65,10 +66,32 @@ export default function Home() {
 
             // document.querySelector("#upArrow").addEventListener("click", slideAnim);
             // document.querySelector("#downArrow").addEventListener("click", slideAnim);
+            // gsap.set('h3,p', {
+            //     opacity: 0
+            // })
+            // const tl = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: "h3,p",
+            //         start: "+=133 80%",
+            //         end: "+=200 40%",
+            //         scrub: true,
+            //         markers: true,
+            //         toggleActions: "play reverse play reverse",
+            //     }
+            // });
+            // tl
+            //     .to('h3,p', { opacity: 1, duration: 0.5 })
+            //     .to('h3,p', { opacity: 0, duration: 0.5 }, 0.5)
+            //     ;
+
+
 
             // create nev dots and add tooltip listeners
             for (let i = 0; i < slides.length; i++) {
-                let tl = gsap.timeline({ paused: true, reversed: true });
+                let tl = gsap.timeline({
+                    paused: true, reversed: true,
+                });
+
                 gsap.set(slides[i], { backgroundColor: colorArray[i] });
                 let newDot = document.createElement("div");
                 newDot.classNameName = "dot";
@@ -201,7 +224,7 @@ export default function Home() {
             }
 
         }, []);
-    } else{
+    } else {
         useEffect(() => {
             dispatch(actions.setLocales());
         }, []);
@@ -245,12 +268,12 @@ export default function Home() {
 
                         <div id="masterWrap">
                             <div id="panelWrap"
-                            style={{
-                                overflowY: matches ? 'unset' : 'auto',
-                                overflowX: matches ? 'unset' : 'hidden',
-                                scrollSnapType: matches ? 'unset' : 'y mandatory',
-                            }}
-                             >
+                                style={{
+                                    overflowY: matches ? 'unset' : 'auto',
+                                    overflowX: matches ? 'unset' : 'hidden',
+                                    scrollSnapType: matches ? 'unset' : 'y mandatory',
+                                }}
+                            >
                                 <section className='section-1'>
                                     <Box sx={{
                                         // backgroundColor: `${color.section1}`,

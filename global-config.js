@@ -26,7 +26,7 @@ export const contentMultipleLangs = {
             TITLE_1: 'Innovate The Future',
             TITLE_2: 'TEKNIX',
             TITLE_3: 'CORPORATION',
-            DES: 'TekNix  is an information technology company providing tech products, applications and solutions for businesses and users.',
+            DES: 'TekNix Corporation is an information technology company providing tech products, applications and solutions for businesses and users.',
         },
         Section_3:
         {
@@ -54,7 +54,7 @@ export const contentMultipleLangs = {
             TITLE_1: 'Products & Services',
             TITLE_2: 'Optimal',
             TITLE_3: 'Solutions',
-            DES: 'TekiNix is confident to be 1-stop provider of smart and breakthrough technology solutions with a multi-chain ecosystem including:',
+            DES: 'TekNix Corporation is confident to be 1-stop provider of smart and breakthrough technology solutions with a multi-chain ecosystem including:',
             ITEM_1: 'Network infrastructure solutions',
             ITEM_2: 'E-commerce solutions',
             ITEM_3: 'Fintech solutions',

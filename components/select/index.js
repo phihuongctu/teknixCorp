@@ -102,7 +102,7 @@ export default function DropdownMenu() {
                             borderRadius: '50%',
                             width: matches ? "32px" : '24px',
                             height: matches ? "32px" : '24px',
-                            objectFit:'cover'
+                            objectFit: 'cover'
                         }} /> :
                     <img
 

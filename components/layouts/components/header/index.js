@@ -1,7 +1,5 @@
 import { Box, Dialog } from '@mui/material';
-import { size } from '../../../../global-config';
-import { img } from '../../../../global-config';
-import { svg } from '../../../../global-config';
+import { size,svg,img } from '../../../../global-config';
 import { useEffect, useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
