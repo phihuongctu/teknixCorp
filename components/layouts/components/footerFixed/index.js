@@ -46,7 +46,14 @@ function Footer() {
                 </Box>
                 <Box>
                     <Link href="mailto:example@gmail.com" >
-                        <Button variant="contained" sx={{ padding:0,borderRadius: 99, minWidth: 56, height: 56,backgroundColor:color.primary }}>
+                        <Button variant="contained" sx={{ padding:0,borderRadius: 99, minWidth: 56, height: 56,backgroundColor:color.primary, '&:hover': {
+                            color: '#fff',
+                            backgroundColor: color.primary
+                        },
+                            '&:hover svg': {
+                                color: '#fff',
+                            }
+                        }}>
                             <MailOutlineIcon sx={{ width: 24, height: 24, color:'#000' }} ></MailOutlineIcon>
                         </Button>
                     </Link>

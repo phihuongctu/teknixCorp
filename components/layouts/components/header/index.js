@@ -78,7 +78,8 @@ function Header() {
                         <DropdownSelect />
                         <Box className='toggle' onClick={handleClickOpen} sx={{
                             display: matches ? 'none' : 'flex',
-                            marginLeft: '24px'
+                            marginLeft: '24px',
+                            cursor:'pointer'
                         }}>
                             <Image
                                 width="32"
