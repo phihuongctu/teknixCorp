@@ -16,7 +16,6 @@ function MyApp({ stars, ...props }) {
                 {/* <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js" /> */}
             </Head>
             <props.Component {...props.pageProps} />
-
         </StoreProvider>
     );
 }

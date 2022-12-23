@@ -138,6 +138,10 @@ a {
   font-size: 20px;
 }
 
+.item-header a:hover {
+  color: #55f985;
+}
+
 @media screen and (max-width: 900px) {
   .item-header a {
     font-size: 1rem;
@@ -293,10 +297,37 @@ h4 {
   }
 }
 
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale3d(0.7, 0.7, 0.7);
+            transform: scale3d(0.7, 0.7, 0.7);
+  }
+  100% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale3d(0.7, 0.7, 0.7);
+            transform: scale3d(0.7, 0.7, 0.7);
+  }
+  100% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+
 .bubble {
   -webkit-animation: spin 15s linear infinite;
           animation: spin 15s linear infinite;
   opacity: 0.4;
+}
+
+.animation-scale {
+  -webkit-animation: scale 4s infinite alternate;
+          animation: scale 4s infinite alternate;
 }
 
 * {

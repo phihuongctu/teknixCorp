@@ -47,6 +47,7 @@ export default function Home() {
     if (!isMobile) {
         useEffect(() => {
             dispatch(actions.setLocales());
+
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
             const slides = document.querySelectorAll("section");
             const container = document.querySelector("#panelWrap");
@@ -329,17 +330,25 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_2.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_2.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_2.TITLE_3} DES={contentMultipleLangs[states.locale].Section_2.DES} />
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className='animation-scale' style={{
+                                            position: 'absolute',
+                                            top: '30%',
+                                            left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
+
+
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
