@@ -15,12 +15,11 @@ function Footer() {
         <Box className="footer"
             sx={{
                 backgroundColor: `transparent`,
-                height: `${size.headerHeight}`,
                 width: '100vw',
                 position: 'fixed',
                 display: 'flex',
                 alignItems: 'center',
-                bottom: 0,
+                bottom: '2rem',
                 left: 0,
             }}
         >

@@ -5,10 +5,6 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import Document, { Html, Main, NextScript } from "next/document";
 
-
-
-
-
 function MyApp({ stars, ...props }) {
 
     return (

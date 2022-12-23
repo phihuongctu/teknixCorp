@@ -154,14 +154,27 @@ a {
 }
 
 h3 {
-  font-size: clamp(32px, 4vw, 130px);
+  font-size: clamp(32px, 5vw, 130px);
   margin-top: 1rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 900px) {
+  h3 {
+    margin-top: 0.5rem;
+  }
 }
 
 p {
   font-size: clamp(16px, 4vw, 32px);
   margin-top: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  p {
+    margin-top: 0.5rem;
+  }
 }
 
 .description,
@@ -179,7 +192,8 @@ li {
 }
 
 ul {
-  padding-left: 2rem;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 ul li {

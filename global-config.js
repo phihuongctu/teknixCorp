@@ -119,7 +119,7 @@ export const contentMultipleLangs = {
             TITLE_2: 'GIẢI PHÁP',
             TITLE_3: 'TỐI ƯU',
             DES: 'TekNix tự tin là đơn vị cung cấp các giải pháp công nghệ thông minh và đột phá với hệ giải pháp tổng thể và đa chuỗi, bao gồm:',
-            ITEM_1:' Giải pháp hạ tâng',
+            ITEM_1:' Giải pháp hạ tầng',
             ITEM_2: ' Giải pháp thương mại điện tử',
             ITEM_3: ' Giải pháp Fintech',
             ITEM_4: ' Ứng dụng Blockchain',
@@ -127,7 +127,7 @@ export const contentMultipleLangs = {
         },
         Section_6:
         {
-            TITLE_1: 'Telecom',
+            TITLE_1: 'Viễn Thông',
             TITLE_2: 'Công Nghệ',
             TITLE_3: 'Tài Chính',
             TITLE_4: 'Thương Mại',

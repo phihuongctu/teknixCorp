@@ -224,8 +224,8 @@ export default function Home() {
                         top: '50%',
                         transform: ' rotate(-90deg)',
                         padding: '0 3rem',
-                        fontSize: '20px',
-                        fontWeight: 500,
+                        fontSize: '18px',
+                        fontWeight: 400,
                         color: '#b1b5c3'
                     }}>FACEBOOK</Link>
 
@@ -420,7 +420,6 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_5.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_5.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_5.TITLE_3} DES={contentMultipleLangs[states.locale].Section_5.DES} />
-                                        <br></br>
                                         <ul>
                                             <li> {contentMultipleLangs[states.locale].Section_5.ITEM_1} </li>
                                             <li> {contentMultipleLangs[states.locale].Section_5.ITEM_2}</li>
@@ -636,30 +635,6 @@ export default function Home() {
                                                 </Stack>
                                             </Stack>
                                         </Box>
-
-
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '180px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '36%',
-                                                left: '30%'
-                                            }}
-                                        />
-                                        <img className='bubble'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '25%',
-                                                minWidth: '180',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '42%',
-                                                left: '58%'
-                                            }}
-                                        />
                                     </Box>
                                 </section>
                                 <section className='section-7'>
@@ -742,7 +717,7 @@ export default function Home() {
 
                         <div class="dots">
                         </div>
-                        <div className="toolTips">
+                        {/* <div className="toolTips">
                             <div className="toolTip">
                                 Slider Control
                             </div>
@@ -761,7 +736,7 @@ export default function Home() {
                             <div className="toolTip">
                                 Follow on Twitter
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </Box>
             </MainLayout>
