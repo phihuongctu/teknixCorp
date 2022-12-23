@@ -116,7 +116,8 @@ function Header() {
                             placeItems: 'center',
                             alignSelf: 'end',
                             fontSize: '1rem',
-                            background:'#fff'
+                            background:'#fff',
+                            cursor:'pointer'
                         }}
                     >
                         X
