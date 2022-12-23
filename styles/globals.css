@@ -178,7 +178,7 @@ p {
 }
 
 .description,
-li {
+section li {
   font-size: clamp(16px, 4vw, 24px);
   max-width: 70%;
   font-weight: 400;
@@ -186,7 +186,7 @@ li {
 
 @media screen and (max-width: 900px) {
   .description,
-  li {
+  section li {
     max-width: 100%;
   }
 }

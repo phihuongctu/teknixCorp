@@ -9,6 +9,8 @@ import { Box } from '@mui/material';
 import { actions, useStore } from '../../store';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Image from 'next/image'
+import { img } from '../../global-config';
 
 
 const StyledMenu = styled((props) => (
@@ -87,12 +89,31 @@ export default function DropdownMenu() {
                     fontStyle: 'Regular',
                     fontSize: matches ? '20px' : '16px',
                     lineHeight: '125%',
+                    minWidth: 'auto'
                 }}
                 disableElevation
                 onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon />}
+            // endIcon={<KeyboardArrowDownIcon />}
             >
-                {contentMultipleLangs[states.locale].LANGUAGE}
+                {contentMultipleLangs[states.locale].LANGUAGE == 'VI' ?
+                    <img
+
+                        src={`${img('flag-vietnam.jpg')}`} alt="" style={{
+                            borderRadius: '50%',
+                            width: matches ? "32px" : '24px',
+                            height: matches ? "32px" : '24px',
+                            objectFit:'cover'
+                        }} /> :
+                    <img
+
+                        src={`${img('flag-usa.jpg')}`} alt="" style={{
+                            borderRadius: '50%',
+                            width: matches ? "32" : '24px',
+                            height: matches ? "32" : '24px',
+                            objectFit: 'cover'
+                        }} />
+                }
+
             </Button>
             <StyledMenu
                 id="demo-customized-menu"
@@ -111,12 +132,12 @@ export default function DropdownMenu() {
                         sx={{
                             fontFamily: 'Lacquer, Inter',
                             fontStyle: 'Regular',
-                            fontSize: '20px',
+                            fontSize: '18px',
                             lineHeight: '125%',
                             padding: '1rem 2.5rem'
                         }}
                     >
-                        {contentMultipleLangs[locale].LANGUAGE}
+                        <Box>{contentMultipleLangs[locale].LANGUAGE}</Box>
                     </MenuItem>
                 ))}
             </StyledMenu>

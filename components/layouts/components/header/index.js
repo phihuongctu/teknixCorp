@@ -89,7 +89,6 @@ function Header() {
                         </Box>
                     </Box>
                 </Box>
-
             </Box>
 
             <Dialog className='popup-menu' fullScreen
@@ -122,10 +121,6 @@ function Header() {
                         }}
                     >
                         X
-                        {/* <Image
-                            width="32"
-                            height="32"
-                            src={`${img('ic-close.png')}`} alt='' priority /> */}
                     </Box>
                 </Box>
                 <Menu />
