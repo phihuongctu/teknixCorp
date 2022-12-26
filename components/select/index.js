@@ -85,7 +85,7 @@ export default function DropdownMenu() {
                 color="inherit"
                 sx={{
                     color: '#b1b5c3',
-                    fontFamily: 'Lacquer, Inter',
+                    fontFamily: 'Space Grotesk, Inter',
                     fontStyle: 'Regular',
                     fontSize: matches ? '20px' : '16px',
                     lineHeight: '125%',
@@ -130,7 +130,7 @@ export default function DropdownMenu() {
                         onClick={() => handleClickMenuItem(locale)}
                         disableRipple
                         sx={{
-                            fontFamily: 'Lacquer, Inter',
+                            fontFamily: 'Space Grotesk, Inter',
                             fontStyle: 'Regular',
                             fontSize: '18px',
                             lineHeight: '125%',

@@ -345,7 +345,7 @@ export default function Home() {
                                             display: 'block',
                                             top:  mousePosition.y,
                                             left:  mousePosition.x ,
-                                            transition: 'all 2.5s ease-in-out',
+                                            transition: 'all 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s',
                                             // transitionProperty: 'top, left'
                                         }}>
                                             <img className='bubble' id='bee'
@@ -368,7 +368,8 @@ export default function Home() {
                                                 // left: matches ? '58%' : '50%'
                                                 bottom: mousePosition.y ,
                                                 right: mousePosition.x ,
-                                                transition: 'all 2.5s ease-in-out',
+                                                // transition: 'all 2.5s ease-in-out',
+                                                transition: 'all 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s',
                                                 // transitionProperty:'right, bottom'
                                             }}
                                         />

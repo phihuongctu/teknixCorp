@@ -29,7 +29,7 @@ function Menu() {
                 className="item-header"
                 sx={{
                     color: '#fff',
-                    fontFamily: 'Lacquer,Inter',
+                    fontFamily: 'Space Grotesk,Inter',
                     fontStyle: 'Regular',
                     fontSize: '16px',
                     lineHeight: '125%',
@@ -41,7 +41,7 @@ function Menu() {
                 className="item-header"
                 sx={{
                     color: '#fff',
-                    fontFamily: 'Lacquer, Inter',
+                    fontFamily: 'Space Grotesk, Inter',
                     fontStyle: 'Regular',
                     fontSize: '16px',
                     lineHeight: '125%',
@@ -53,7 +53,7 @@ function Menu() {
                 className="item-header"
                 sx={{
                     color: '#fff',
-                    fontFamily: 'Lacquer, Inter',
+                    fontFamily: 'Space Grotesk, Inter',
                     fontStyle: 'Regular',
                     fontSize: '16px',
                     lineHeight: '125%',
