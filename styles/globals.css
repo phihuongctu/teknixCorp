@@ -299,8 +299,8 @@ h4 {
 
 @-webkit-keyframes scale {
   0% {
-    -webkit-transform: scale3d(0.7, 0.7, 0.7);
-            transform: scale3d(0.7, 0.7, 0.7);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
   100% {
     -webkit-transform: scale3d(1.5, 1.5, 1.5);
@@ -310,8 +310,8 @@ h4 {
 
 @keyframes scale {
   0% {
-    -webkit-transform: scale3d(0.7, 0.7, 0.7);
-            transform: scale3d(0.7, 0.7, 0.7);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
   100% {
     -webkit-transform: scale3d(1.5, 1.5, 1.5);
@@ -326,8 +326,8 @@ h4 {
 }
 
 .animation-scale {
-  -webkit-animation: scale 4s infinite alternate;
-          animation: scale 4s infinite alternate;
+  -webkit-animation: scale 1s infinite alternate;
+          animation: scale 1s infinite alternate;
 }
 
 * {

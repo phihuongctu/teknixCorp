@@ -33,6 +33,7 @@ import logoVNNic from '/public/images/png-images/logo-vnnic.png';
 import logoVnpt from '/public/images/png-images/logo-vnpt.png';
 import logoVnso from '/public/images/png-images/logo-vnso.png';
 import { isMobile } from 'react-device-detect';
+import { useState } from 'react';
 
 
 export default function Home() {
@@ -40,14 +41,15 @@ export default function Home() {
     const [states, dispatch] = useStore();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
-    // console.clear()
 
-    // const el = useRef(null);
-    // const child = gsap.utils.selector(el);
+    const [isActive, setIsActive] = useState(true);
+
     if (!isMobile) {
         useEffect(() => {
             dispatch(actions.setLocales());
 
+
+            // scroll vertical gsap
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
             const slides = document.querySelectorAll("section");
             const container = document.querySelector("#panelWrap");
@@ -224,10 +226,29 @@ export default function Home() {
                 });
             }
 
+            // animation scale
+            const handleClick = event => {
+                // 👇️ toggle isActive state on click
+                setIsActive(current => !current);
+            };
+            const myInterval = setInterval(() => {
+                handleClick();
+            }, 4000);
+            return () => clearInterval(myInterval);
+
         }, []);
     } else {
         useEffect(() => {
             dispatch(actions.setLocales());
+
+            // animation scale
+            const handleClick = event => {
+                setIsActive(current => !current);
+            };
+            const myInterval = setInterval(() => {
+                handleClick();
+            }, 4000);
+            return () => clearInterval(myInterval);
         }, []);
     }
     // check mobile
@@ -292,17 +313,23 @@ export default function Home() {
 
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
 
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
+                                            position: 'absolute',
+                                            top: '30%',
+                                            left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -330,7 +357,7 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_2.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_2.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_2.TITLE_3} DES={contentMultipleLangs[states.locale].Section_2.DES} />
-                                        <Box className='animation-scale' style={{
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
                                             top: '30%',
                                             left: '30%',

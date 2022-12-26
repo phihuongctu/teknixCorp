@@ -233,7 +233,7 @@ h4 {
 
 @keyframes scale {
     0% {
-        transform: scale3d(0.7, 0.7, 0.7);
+        transform: scale3d(1, 1, 1);
     }
     100% {
         transform: scale3d(1.5, 1.5, 1.5);
@@ -245,7 +245,7 @@ h4 {
     opacity: 0.4;
 }
 .animation-scale {
-    animation: scale 4s infinite alternate;
+    animation: scale 1s infinite alternate;
 }
 
 * {
