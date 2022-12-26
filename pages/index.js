@@ -78,8 +78,8 @@ export default function Home() {
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
             const slides = document.querySelectorAll("section");
             const container = document.querySelector("#panelWrap");
-            let dots = document.querySelector(".dots");
-            let toolTips = document.querySelectorAll(".toolTip");
+            // let dots = document.querySelector(".dots");
+            // let toolTips = document.querySelectorAll(".toolTip");
             let oldSlide = 0;
             let activeSlide = 0;
             let navDots = [];
@@ -87,10 +87,10 @@ export default function Home() {
             let offsets = [];
             let toolTipAnims = [];
             let ih = window.innerHeight;
-            const mouseAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-            const handAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-            const cursorAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-            const arrowAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+            // const mouseAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+            // const handAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+            // const cursorAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+            // const arrowAnim = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
             // document.querySelector("#upArrow").addEventListener("click", slideAnim);
             // document.querySelector("#downArrow").addEventListener("click", slideAnim);
@@ -115,65 +115,65 @@ export default function Home() {
 
 
             // create nev dots and add tooltip listeners
-            for (let i = 0; i < slides.length; i++) {
-                let tl = gsap.timeline({
-                    paused: true, reversed: true,
-                });
+            // for (let i = 0; i < slides.length; i++) {
+            //     let tl = gsap.timeline({
+            //         paused: true, reversed: true,
+            //     });
 
-                gsap.set(slides[i], { backgroundColor: colorArray[i] });
-                let newDot = document.createElement("div");
-                newDot.classNameName = "dot";
-                newDot.index = i;
-                navDots.push(newDot);
-                newDot.addEventListener("click", slideAnim);
-                newDot.addEventListener("mouseenter", dotHover);
-                newDot.addEventListener("mouseleave", dotHover);
-                dots.appendChild(newDot);
-                offsets.push(-slides[i].offsetTop);
-                tl.to(toolTips[i], 0.25, { opacity: 1, ease: Linear.easeNone });
-                toolTipAnims.push(tl);
-            }
+            //     gsap.set(slides[i], { backgroundColor: colorArray[i] });
+            //     let newDot = document.createElement("div");
+            //     newDot.classNameName = "dot";
+            //     newDot.index = i;
+            //     navDots.push(newDot);
+            //     newDot.addEventListener("click", slideAnim);
+            //     newDot.addEventListener("mouseenter", dotHover);
+            //     newDot.addEventListener("mouseleave", dotHover);
+            //     dots.appendChild(newDot);
+            //     offsets.push(-slides[i].offsetTop);
+            //     tl.to(toolTips[i], 0.25, { opacity: 1, ease: Linear.easeNone });
+            //     toolTipAnims.push(tl);
+            // }
 
             // icon animations for slide 1
-            mouseAnim.fromTo("#mouseRings circle", { attr: { r: 12 } }, { duration: 0.8, stagger: 0.25, attr: { r: 40 } });
-            mouseAnim.fromTo("#mouseRings circle", { opacity: 0 }, { duration: 0.4, stagger: 0.25, opacity: 1 }, 0);
-            mouseAnim.fromTo("#mouseRings circle", { opacity: 1 }, { duration: 0.4, stagger: 0.25, opacity: 0 }, 0.4);
+            // mouseAnim.fromTo("#mouseRings circle", { attr: { r: 12 } }, { duration: 0.8, stagger: 0.25, attr: { r: 40 } });
+            // mouseAnim.fromTo("#mouseRings circle", { opacity: 0 }, { duration: 0.4, stagger: 0.25, opacity: 1 }, 0);
+            // mouseAnim.fromTo("#mouseRings circle", { opacity: 1 }, { duration: 0.4, stagger: 0.25, opacity: 0 }, 0.4);
 
-            handAnim.to("#hand", { duration: 0.75, y: -16, rotation: 5, transformOrigin: "right bottom" });
-            handAnim.to("#hand", { duration: 0.5, y: 15, ease: "power3.inOut" });
-            handAnim.to("#hand", { duration: 1, y: 0, rotation: 0 });
+            // handAnim.to("#hand", { duration: 0.75, y: -16, rotation: 5, transformOrigin: "right bottom" });
+            // handAnim.to("#hand", { duration: 0.5, y: 15, ease: "power3.inOut" });
+            // handAnim.to("#hand", { duration: 1, y: 0, rotation: 0 });
 
-            gsap.set("#cursor", { rotation: 240, transformOrigin: "center center", x: -25 });
-            cursorAnim.to("#cursor", 0.25, { duration: 0.25, y: -24 });
-            cursorAnim.to("#iconCircles circle", { duration: 0.5, stagger: 0.15, attr: { r: 6 } }, "expand");
-            cursorAnim.to("#cursor", { duration: 1.1, y: 50 }, "expand");
-            cursorAnim.to("#cursor", { duration: 0.75, y: 0 }, "contract");
-            cursorAnim.to("#iconCircles circle", { duration: 0.5, attr: { r: 4 } }, "contract");
+            // gsap.set("#cursor", { rotation: 240, transformOrigin: "center center", x: -25 });
+            // cursorAnim.to("#cursor", 0.25, { duration: 0.25, y: -24 });
+            // cursorAnim.to("#iconCircles circle", { duration: 0.5, stagger: 0.15, attr: { r: 6 } }, "expand");
+            // cursorAnim.to("#cursor", { duration: 1.1, y: 50 }, "expand");
+            // cursorAnim.to("#cursor", { duration: 0.75, y: 0 }, "contract");
+            // cursorAnim.to("#iconCircles circle", { duration: 0.5, attr: { r: 4 } }, "contract");
 
-            arrowAnim.to("#caret", { duration: 0.5, attr: { points: "30 40, 50 65, 70 40" }, repeat: 3, yoyo: true, ease: "power2.inOut", repeatDelay: 0.25 });
+            // arrowAnim.to("#caret", { duration: 0.5, attr: { points: "30 40, 50 65, 70 40" }, repeat: 3, yoyo: true, ease: "power2.inOut", repeatDelay: 0.25 });
 
-            // get elements positioned
-            gsap.set(".dots", { yPercent: -50 });
-            gsap.set(".toolTips", { yPercent: -50 });
+            // // get elements positioned
+            // gsap.set(".dots", { yPercent: -50 });
+            // gsap.set(".toolTips", { yPercent: -50 });
 
             // side screen animation with nav dots
             const dotAnim = gsap.timeline({ paused: true });
-            dotAnim.to(
-                ".dot",
-                {
-                    stagger: { each: 1, yoyo: true, repeat: 1 },
-                    scale: 2.1,
-                    rotation: 0.1,
-                    ease: "none"
-                },
-                0.5
-            );
-            dotAnim.time(1);
+            // dotAnim.to(
+            //     ".dot",
+            //     {
+            //         stagger: { each: 1, yoyo: true, repeat: 1 },
+            //         scale: 2.1,
+            //         rotation: 0.1,
+            //         ease: "none"
+            //     },
+            //     0.5
+            // );
+            // dotAnim.time(1);
 
             // tooltips hovers
-            function dotHover() {
-                toolTipAnims[this.index].reversed() ? toolTipAnims[this.index].play() : toolTipAnims[this.index].reverse();
-            }
+            // function dotHover() {
+            //     toolTipAnims[this.index].reversed() ? toolTipAnims[this.index].play() : toolTipAnims[this.index].reverse();
+            // }
 
             // figure out which of the 4 nav controls called the function
             function slideAnim(e) {
