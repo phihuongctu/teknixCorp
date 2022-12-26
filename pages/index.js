@@ -296,7 +296,6 @@ export default function Home() {
                         padding: '0 3rem',
                         fontSize: '18px',
                         fontWeight: 400,
-                        color: '#b1b5c3'
                     }}>FACEBOOK</Link>
 
                     <div className="hideMe">
@@ -337,12 +336,6 @@ export default function Home() {
                                     }}>
 
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
-                                        <p>
-                                            Your cursor position:{mousePosition.x}
-                                            <br />
-                                            Your cursor position:{mousePosition.y}
-                                            <br />
-                                        </p>
                                         <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
                                             // top: '30%',
@@ -824,7 +817,7 @@ export default function Home() {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href='phoneto:0901001079'>
+                                                <Link href='tel:0901001079'>
                                                     <Image
                                                         width="32"
                                                         height="32"
