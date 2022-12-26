@@ -229,7 +229,7 @@ export default function Home() {
             // });
 
             // dragMe[0].id = "dragger";
-            // newSize();
+            newSize();
 
             // resize all panels and refigure draggable snap array
             function newSize() {
