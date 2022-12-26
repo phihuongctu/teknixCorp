@@ -43,10 +43,35 @@ export default function Home() {
     const matches = useMediaQuery(theme.breakpoints.up('md'));
 
     const [isActive, setIsActive] = useState(true);
+    const useMousePosition = () => {
+        const [
+            mousePosition,
+            setMousePosition
+        ] = useState({ x: '25%', y: '50%' });
+
+        useEffect(() => {
+            const updateMousePosition = ev => {
+                setMousePosition({ x: ev.clientX + 'px', y: ev.clientY + 'px' });
+            };
+
+            window.addEventListener('mousemove', updateMousePosition);
+
+            return () => {
+                window.removeEventListener('mousemove', updateMousePosition);
+            };
+        }, []);
+
+        return mousePosition;
+    };
+    const mousePosition = useMousePosition();
+
+
 
     if (!isMobile) {
         useEffect(() => {
             dispatch(actions.setLocales());
+
+
 
 
             // scroll vertical gsap
@@ -312,14 +337,23 @@ export default function Home() {
                                     }}>
 
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
-
+                                        <p>
+                                            Your cursor position:{mousePosition.x}
+                                            <br />
+                                            Your cursor position:{mousePosition.y}
+                                            <br />
+                                        </p>
                                         <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
-                                            top: '30%',
-                                            left: '30%',
+                                            // top: '30%',
+                                            // left: '30%',
                                             width: '35%',
                                             minWidth: '220px',
                                             display: 'block',
+                                            top:  mousePosition.y,
+                                            left:  mousePosition.x ,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
                                         }}>
                                             <img className='bubble' id='bee'
                                                 src={`${img('Bubble-Network.png')}`}
@@ -337,8 +371,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y ,
+                                                right: mousePosition.x ,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
@@ -359,11 +397,15 @@ export default function Home() {
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_2.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_2.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_2.TITLE_3} DES={contentMultipleLangs[states.locale].Section_2.DES} />
                                         <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
-                                            top: '30%',
-                                            left: '30%',
+                                            // top: '30%',
+                                            // left: '30%',
                                             width: '35%',
                                             minWidth: '220px',
                                             display: 'block',
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
                                         }}>
                                             <img className='bubble' id='bee'
                                                 src={`${img('Bubble-Network.png')}`}
@@ -374,8 +416,6 @@ export default function Home() {
                                                 }}
                                             />
                                         </Box>
-
-
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -383,8 +423,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
@@ -403,17 +447,27 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_3.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_3.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_3.TITLE_3} DES={contentMultipleLangs[states.locale].Section_3.DES} />
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
+                                            position: 'absolute',
+                                            // top: '30%',
+                                            // left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -421,8 +475,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
@@ -441,17 +499,27 @@ export default function Home() {
                                         position: 'relative'
                                     }}>
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_4.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_4.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_4.TITLE_3} DES={contentMultipleLangs[states.locale].Section_4.DES} />
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
+                                            position: 'absolute',
+                                            // top: '30%',
+                                            // left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -459,8 +527,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
@@ -486,17 +558,27 @@ export default function Home() {
                                             <li> {contentMultipleLangs[states.locale].Section_5.ITEM_4}</li>
                                             <li> {contentMultipleLangs[states.locale].Section_5.ITEM_5}</li>
                                         </ul>
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
+                                            position: 'absolute',
+                                            // top: '30%',
+                                            // left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -504,8 +586,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
@@ -747,17 +833,27 @@ export default function Home() {
                                                 </Link>
                                             </li>
                                         </ul>
-                                        <img className='bubble' id='bee'
-                                            src={`${img('Bubble-Network.png')}`}
-                                            style={{
-                                                width: '35%',
-                                                minWidth: '220px',
-                                                display: 'block',
-                                                position: 'absolute',
-                                                top: '30%',
-                                                left: '30%'
-                                            }}
-                                        />
+                                        <Box className={isActive ? 'animation-scale' : ''} style={{
+                                            position: 'absolute',
+                                            // top: '30%',
+                                            // left: '30%',
+                                            width: '35%',
+                                            minWidth: '220px',
+                                            display: 'block',
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
+                                            transition: 'all 2.5s ease-in-out',
+                                            // transitionProperty: 'top, left'
+                                        }}>
+                                            <img className='bubble' id='bee'
+                                                src={`${img('Bubble-Network.png')}`}
+                                                style={{
+                                                    width: '35%',
+                                                    minWidth: '220px',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        </Box>
                                         <img className='bubble'
                                             src={`${img('Bubble-Network.png')}`}
                                             style={{
@@ -765,8 +861,12 @@ export default function Home() {
                                                 minWidth: '180px',
                                                 display: 'block',
                                                 position: 'absolute',
-                                                top: matches ? '42%' : '51%',
-                                                left: matches ? '58%' : '50%'
+                                                // top: matches ? '42%' : '51%',
+                                                // left: matches ? '58%' : '50%'
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
+                                                transition: 'all 2.5s ease-in-out',
+                                                // transitionProperty:'right, bottom'
                                             }}
                                         />
                                     </Box>
