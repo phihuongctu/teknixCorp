@@ -189,18 +189,25 @@ h4 {
     z-index: 1;
     li {
         margin-top: 1.5rem;
+        @media screen and (max-width: 900px) {
+            margin-top: 0.5rem;
+        }
         display: flex;
         align-items: center;
         a {
             display: flex;
             align-items: center;
             color: #fff;
-            &:hover{
+            &:hover {
                 color: $primary;
             }
         }
         img {
             margin-right: 2rem;
+            @media screen and (max-width: 900px) {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }

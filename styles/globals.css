@@ -229,6 +229,12 @@ h4 {
           align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .list-address li {
+    margin-top: 0.5rem;
+  }
+}
+
 .list-address li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,6 +251,13 @@ h4 {
 
 .list-address li img {
   margin-right: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .list-address li img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .popup-menu .menu {

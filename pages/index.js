@@ -627,7 +627,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -635,7 +635,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -643,7 +643,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -651,7 +651,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -659,7 +659,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
@@ -677,7 +677,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -693,7 +693,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -701,7 +701,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                 </Stack>
                                             </Stack >
                                             <Stack alignItems='center'>
@@ -719,7 +719,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -727,7 +727,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -735,7 +735,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
@@ -753,7 +753,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -761,7 +761,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -769,7 +769,7 @@ export default function Home() {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} />
+                                                        }} priority/>
                                                 </Stack>
                                             </Stack>
                                         </Box>
