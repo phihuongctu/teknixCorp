@@ -36,7 +36,8 @@ import { isMobile } from 'react-device-detect';
 import { useState } from 'react';
 
 
-export default function Home() {
+export default function Home(props) {
+
 
     const [states, dispatch] = useStore();
     const theme = useTheme();
@@ -276,8 +277,6 @@ export default function Home() {
             return () => clearInterval(myInterval);
         }, []);
     }
-    // check mobile
-
 
     return (
         <RootLayout>
@@ -336,6 +335,7 @@ export default function Home() {
                                     }}>
 
                                         <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
+
                                         <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
                                             // top: '30%',
