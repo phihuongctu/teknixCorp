@@ -1,7 +1,77 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, defineSchema } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+
+const schema = defineSchema({
+  collections: [
+    {
+      label: "Section_1",
+      name: "page",
+      path: "content/page",
+      format: "md",
+      fields: [
+        // {
+        //   type: "string",
+        //   label: "Title",
+        //   name: "title",
+        // },
+        {
+          name: "Title_1",
+          label: "Title 1",
+          type: "rich-text",
+          isBody: true,
+          ui: {
+            component: "textarea",
+          },
+        },
+        // {
+        //   name: "Title_2",
+        //   label: "Title 2",
+        //   type: "string",
+        //   // isBody: true,
+        //   ui: {
+        //     component: "textarea",
+        //   },
+        // },
+      ],
+      ui: {
+        router: ({ document }) => {
+          if (document._sys.filename === "/") {
+            return `/`;
+          }
+          return undefined;
+        },
+      },
+    },
+    {
+      label: "Blog Posts",
+      name: "post",
+      path: "content/post",
+      fields: [
+        {
+          type: "string",
+          label: "Title",
+          name: "title",
+        },
+        {
+          type: "string",
+          label: "Blog Post Body",
+          name: "body",
+          isBody: true,
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+      ui: {
+        router: ({ document }) => {
+          return `/posts/${document._sys.filename}`;
+        },
+      },
+    },
+  ],
+});
 
 export default defineConfig({
   branch,
@@ -17,32 +87,5 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  schema: {
-    collections: [
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
-      },
-    ],
-  },
+  schema
 });

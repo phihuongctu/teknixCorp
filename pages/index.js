@@ -35,9 +35,35 @@ import logoVnso from '/public/images/png-images/logo-vnso.png';
 import { isMobile } from 'react-device-detect';
 import { useState } from 'react';
 
+import { useTina } from 'tinacms/dist/react'
+import { client } from '../.tina/__generated__/client'
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+
+export const getStaticProps = async () => {
+    const { data, query, variables } = await client.queries.page({
+        relativePath: "Home.md",
+    });
+
+    return {
+        props: {
+            data,
+            query,
+            variables,
+            //myOtherProp: 'some-other-data',
+        },
+    };
+};
 
 export default function Home(props) {
 
+    const { data } = useTina({
+        query: props.query,
+        variables: props.variables,
+        data: props.data,
+    });
+
+    const content = data.page.body;
+    console.log(data);
 
     const [states, dispatch] = useStore();
     const theme = useTheme();
@@ -66,15 +92,9 @@ export default function Home(props) {
     };
     const mousePosition = useMousePosition();
 
-
-
     if (!isMobile) {
         useEffect(() => {
             dispatch(actions.setLocales());
-
-
-
-
             // scroll vertical gsap
             const colorArray = ["#426F42", "#262626", "#36648B", "#683A5E", "#683A5E", "#36648B"];
             const slides = document.querySelectorAll("section");
@@ -334,7 +354,10 @@ export default function Home(props) {
 
                                     }}>
 
-                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
+                                        {/* <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} /> */}
+
+                                        <TinaMarkdown content={content} />
+                                        <p>{content}</p>
 
                                         <Box className={isActive ? 'animation-scale' : ''} style={{
                                             position: 'absolute',
@@ -896,3 +919,5 @@ export default function Home(props) {
         </RootLayout>
     )
 }
+
+
