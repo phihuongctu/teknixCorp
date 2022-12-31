@@ -354,7 +354,7 @@ export default function Home(props) {
 
                                     }}>
 
-                                        {/* <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} /> */}
+                                        <BoxText TITLE_1={contentMultipleLangs[states.locale].Section_1.TITLE_1} TITLE_2={contentMultipleLangs[states.locale].Section_1.TITLE_2} TITLE_3={contentMultipleLangs[states.locale].Section_1.TITLE_3} DES={contentMultipleLangs[states.locale].Section_1.DES} />
 
                                         <TinaMarkdown content={content} />
                                         <p>{content}</p>
@@ -366,8 +366,8 @@ export default function Home(props) {
                                             width: '35%',
                                             minWidth: '220px',
                                             display: 'block',
-                                            top:  mousePosition.y,
-                                            left:  mousePosition.x ,
+                                            top: mousePosition.y,
+                                            left: mousePosition.x,
                                             transition: 'all 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s',
                                             // transitionProperty: 'top, left'
                                         }}>
@@ -389,8 +389,8 @@ export default function Home(props) {
                                                 position: 'absolute',
                                                 // top: matches ? '42%' : '51%',
                                                 // left: matches ? '58%' : '50%'
-                                                bottom: mousePosition.y ,
-                                                right: mousePosition.x ,
+                                                bottom: mousePosition.y,
+                                                right: mousePosition.x,
                                                 // transition: 'all 2.5s ease-in-out',
                                                 transition: 'all 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s',
                                                 // transitionProperty:'right, bottom'
@@ -651,7 +651,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -659,7 +659,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -667,7 +667,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -675,7 +675,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -683,7 +683,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
@@ -701,7 +701,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -717,7 +717,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -725,7 +725,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                 </Stack>
                                             </Stack >
                                             <Stack alignItems='center'>
@@ -743,7 +743,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -751,7 +751,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -759,7 +759,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                 </Stack>
                                             </Stack>
                                             <Stack alignItems='center'>
@@ -777,7 +777,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -785,7 +785,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                     <Image
                                                         width="200"
                                                         height="100"
@@ -793,7 +793,7 @@ export default function Home(props) {
                                                             width: '50%',
                                                             height: '100%',
                                                             maxWidth: '200px'
-                                                        }} priority/>
+                                                        }} priority />
                                                 </Stack>
                                             </Stack>
                                         </Box>
